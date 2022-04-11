@@ -25,20 +25,24 @@ public class Blackjack {
         boolean repeat1 = true;
         
         
+            Hand playerHand = new Hand();
+            
+            Hand dealerHand = new Hand();
+            
+            dealerHand.addCard();
+        
         while(repeat){
             
             while(repeat1){
             
-            Hand playerHand = new Hand();
             
-            Hand dealerHand = new Hand();
             
             
 //            playerHand.addCard();
 //            playerHand.addCard();
 //            
 //            dealerHand.addCard();
-            dealerHand.addCard();
+            
             
             System.out.println("your card 1 is "+playerHand.addCard());
             System.out.println("your card 2 is "+playerHand.addCard());
@@ -173,7 +177,7 @@ public class Blackjack {
                 System.out.println("It's a push. No one wins");
                 break;
             }
-                // WHILE LOOP}
+            }  // WHILE LOOP}
             
                 
                 if(wonGame){
@@ -187,6 +191,7 @@ public class Blackjack {
                 }
                 
                 
+             int dealerCount = 3;   
             
             while(dealerHand.handValue <= 17){
                 System.out.println("dealer's card "+dealerCount+" is "+dealerHand.addCard());
@@ -312,7 +317,7 @@ public class Blackjack {
        
             
     }
-}
+
             
 
 
