@@ -8,10 +8,7 @@ import java.util.Scanner;
  */
 public class Blackjack {
     
-//    public static boolean wonGame;
-//    public static boolean lostGame;
-//    public static boolean pushGame;
-//    public static int score;
+
 
     /**
      * @param args the command line arguments
@@ -20,16 +17,14 @@ public class Blackjack {
         int score;
         score = 0;
         System.out.println("Welcome to Blackjack");
-        System.out.println("Please enter your username: ");
+        System.out.print("Please enter your username: ");
         Scanner input = new Scanner(System.in);
         String uname = input.next();
-        System.out.println("Hello "+uname+"! Let's begin");
+        System.out.println("\nHello "+uname+"! Let's begin");
         boolean repeat = true;
         boolean repeat1 = true;
         
-//        boolean wonGame = false;
-//        boolean lostGame = false;
-//        boolean pushGame = false;
+
         
             
             
@@ -58,7 +53,7 @@ public class Blackjack {
                 
                 
                 System.out.println("\nDealer's face up card is "+dealerHand.addCard());
-                System.out.println("dealer's total value is "+dealerHand.handValue);
+//                System.out.println("dealer's total value is "+dealerHand.handValue);
                 
                 
                 
@@ -67,27 +62,27 @@ public class Blackjack {
                     System.out.println("\nBLACKJACK!!!! YOU WON!!");
                     score++;
                     wonGame = true;
-                    //break;
+                    
                 }
                 
                 if (playerHand.handValue > 21){
                     System.out.println("\nYou lost. Your hand value went more than 21");
                     lostGame = true;
-                    //break;
+                    
                 }
                 
                 if (dealerHand.handValue > 21){
                     System.out.println("\nDealer's hand value went over 21. YOU WON!!!!");
                     score++;
                     wonGame = true;
-                    //break;
+                    
                 }
                 
                 
                
                 
                 
-                //if(playerHand.handValue < 21 && dealerHand.handValue < 21){
+                
                 
                 
                 if(!wonGame && !lostGame && !pushGame){
@@ -118,11 +113,11 @@ public class Blackjack {
                 
                 
                 
-                //if (playerHand.handValue <= 21 && dealerHand.handValue <= 17){
+               
                 
                 
                 if(!wonGame && !lostGame && !pushGame){
-                while(dealerHand.handValue <= 17){
+                while(dealerHand.handValue <= 16){
                     System.out.println("\nDealer drew "+dealerHand.addCard());
                     System.out.println("dealer's hand value is "+dealerHand.handValue);
                 }
@@ -136,7 +131,7 @@ public class Blackjack {
                     System.out.println("\nDealer's hand value went over 21. YOU WON!!!!");
                     score++;
                     wonGame = true;
-                    //break;  eh vala vi
+                    
                 }
                 else{
                     
@@ -161,8 +156,7 @@ public class Blackjack {
             }
                 
                 
-                //eh vala
-                
+               
                 
                 
                 System.out.println("\nYour score is "+score);
@@ -177,13 +171,7 @@ public class Blackjack {
                 
                 
             }
-            
-            
-        
-        
-        
-       
-            
+                 
     }
     
 }
