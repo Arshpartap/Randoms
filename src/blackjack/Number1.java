@@ -10,15 +10,50 @@ import static java.lang.Integer.parseInt;
 public class Number1 {
 
     
-    public int num;
-    public String[] numbers = {"Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King", "Ace"};
-    public int value;
-    public String numName;
+
+    
+    int num;
+    private String[] numbers = {"Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King", "Ace"};
+    private int value;
+    private String numName;
+    
+    
+    public int getNum() {
+        return num;
+    }
+
+    public void setNum(int num) {
+        this.num = num;
+    }
+
+    public String[] getNumbers() {
+        return numbers;
+    }
+
+    public void setNumbers(String[] numbers) {
+        this.numbers = numbers;
+    }
+
+    public int getValue() {
+        return value;
+    }
+
+    public void setValue(int value) {
+        this.value = value;
+    }
+
+    private String getNumName() {
+        return numName;
+    }
+
+    public void setNumName(String numName) {
+        this.numName = numName;
+    }
     
     
     public Number1(int index){
         this.numName = numbers[index];
-        switch(numName){
+        switch(this.getNumName()){
         
             case "Two": this.num = 2; break;
             case "Three": this.num = 3; break;
@@ -39,8 +74,8 @@ public class Number1 {
     
     
     public String numName(int index){
-        numName = this.numbers[index];
-        return numName;
+        this.setNumName(this.getNumbers()[index]);
+        return this.getNumName();
     }
     
     public int getValue(String numName){

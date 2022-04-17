@@ -7,10 +7,37 @@ package blackjack;
 public class Suit1 {
 
     
+
     
-    public String[] suits = {"Clubs", "Diamonds", "Spades", "Hearts"};
-    public String suit;
-    public String suitName;
+    
+    private String[] suits = {"Clubs", "Diamonds", "Spades", "Hearts"};
+    private String suit;
+    private String suitName;
+    
+    
+    public String[] getSuits() {
+        return suits;
+    }
+
+    public void setSuits(String[] suits) {
+        this.suits = suits;
+    }
+
+    public String getSuit() {
+        return suit;
+    }
+
+    public void setSuit(String suit) {
+        this.suit = suit;
+    }
+
+    public String getSuitName() {
+        return suitName;
+    }
+
+    public void setSuitName(String suitName) {
+        this.suitName = suitName;
+    }
     
     
 //    public Suit1(){

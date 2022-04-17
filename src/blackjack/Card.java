@@ -5,9 +5,9 @@ package blackjack;
  * @author arshp
  */
 public class Card {
-    public Number1 num;
-    public Suit1 suit;
-    public int numValue;
+    private Number1 num;
+    private Suit1 suit;
+    private int numValue;
     
     public Card(Number1 num, Suit1 suit){
         this.num = num;
@@ -22,6 +22,10 @@ public class Card {
     
     public Number1 getNum(){
         return this.num;
+    }
+    
+    public int getNumValue(){
+        return this.numValue;
     }
     
     

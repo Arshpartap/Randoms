@@ -48,7 +48,7 @@ public class Blackjack {
                 
                 System.out.println("\nYour card 1 is "+playerHand.addCard());
                 System.out.println("Your card 2 is "+playerHand.addCard());
-                System.out.println("Your hand value is "+playerHand.handValue);
+                System.out.println("Your hand value is "+playerHand.getHandValue());
                 
                 
                 
@@ -58,20 +58,20 @@ public class Blackjack {
                 
                 
                 
-                if (playerHand.handValue == 21){
+                if (playerHand.getHandValue() == 21){
                     System.out.println("\nBLACKJACK!!!! YOU WON!!");
                     score++;
                     wonGame = true;
                     
                 }
                 
-                if (playerHand.handValue > 21){
+                if (playerHand.getHandValue() > 21){
                     System.out.println("\nYou lost. Your hand value went more than 21");
                     lostGame = true;
                     
                 }
                 
-                if (dealerHand.handValue > 21){
+                if (dealerHand.getHandValue() > 21){
                     System.out.println("\nDealer's hand value went over 21. YOU WON!!!!");
                     score++;
                     wonGame = true;
@@ -86,15 +86,15 @@ public class Blackjack {
                 
                 
                 if(!wonGame && !lostGame && !pushGame){
-                while (playerHand.handValue <= 21){
+                while (playerHand.getHandValue() <= 21){
                     
                     System.out.println("\nWould you like to (1)Hit or (2)Stand ?");
                     int hos = input.nextInt();
                     if (hos == 1){
                         System.out.println("\nYou drew "+playerHand.addCard());
-                        System.out.println("You hand value is "+playerHand.handValue);
+                        System.out.println("You hand value is "+playerHand.getHandValue());
                         
-                        if(playerHand.handValue > 21){
+                        if(playerHand.getHandValue() > 21){
                             System.out.println("\nYour hand value went over 21. You lost");
                             lostGame = true;
                             break;
@@ -102,7 +102,9 @@ public class Blackjack {
                         
                         
                     }
-                    else { break; }
+                    else { 
+                        System.out.println("\nDealer's hand value is "+dealerHand.getHandValue());
+                        break; }
                     
                     
                     
@@ -117,9 +119,9 @@ public class Blackjack {
                 
                 
                 if(!wonGame && !lostGame && !pushGame){
-                while(dealerHand.handValue <= 16){
+                while(dealerHand.getHandValue() <= 16){
                     System.out.println("\nDealer drew "+dealerHand.addCard());
-                    System.out.println("dealer's hand value is "+dealerHand.handValue);
+                    System.out.println("dealer's hand value is "+dealerHand.getHandValue());
                 }
                 }
                 
@@ -127,7 +129,7 @@ public class Blackjack {
                 
                 
                 if(!wonGame && !lostGame && !pushGame){
-                if(dealerHand.handValue > 21){
+                if(dealerHand.getHandValue() > 21){
                     System.out.println("\nDealer's hand value went over 21. YOU WON!!!!");
                     score++;
                     wonGame = true;
@@ -135,18 +137,18 @@ public class Blackjack {
                 }
                 else{
                     
-                    if(dealerHand.handValue > playerHand.handValue){
+                    if(dealerHand.getHandValue() > playerHand.getHandValue()){
                         System.out.println("\nYou lost. Dealer's hand value is more than your's");
                         lostGame = true;
                     }
                     
-                    if(dealerHand.handValue < playerHand.handValue){
+                    if(dealerHand.getHandValue() < playerHand.getHandValue()){
                         System.out.println("\nYour hand value is more than the dealer's. YOU WON!!!!");
                         score++;
                         wonGame = true;
                     }
                     
-                    if(dealerHand.handValue == playerHand.handValue){
+                    if(dealerHand.getHandValue() == playerHand.getHandValue()){
                         System.out.println("\nIt's a push. Your hand is value is equal to the dealer's");
                         pushGame = true;
                     }
