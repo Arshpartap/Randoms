@@ -8,14 +8,17 @@ import static java.lang.Integer.parseInt;
  * @author arshp
  */
 public class Number1 {
-
-    
-
-    
-    int num;
+    private int num;
     private String[] numbers = {"Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King", "Ace"};
     private int value;
     private String numName;
+    
+   
+    public Number1(int num, int value, String numName) {
+        this.num = num;
+        this.value = value;
+        this.numName = numName;
+    }
     
     
     public int getNum() {
@@ -55,19 +58,45 @@ public class Number1 {
         this.numName = numbers[index];
         switch(this.getNumName()){
         
-            case "Two": this.num = 2; break;
-            case "Three": this.num = 3; break;
-            case "Four": this.num = 4; break;
-            case "Five": this.num = 5; break;
-            case "Six": this.num = 6; break;
-            case "Seven": this.num = 7; break;
-            case "Eight": this.num = 8; break;
-            case "Nine": this.num = 9; break;
-            case "Ten": this.num = 10; break;
-            case "Jack": this.num = 10; break;
-            case "Queen": this.num = 10; break;
-            case "King": this.num = 10; break;
-            case "Ace": this.num = 11; break;
+            case "Two": 
+                this.num = 2; 
+                break;
+            case "Three": 
+                this.num = 3; 
+                break;
+            case "Four": 
+                this.num = 4; 
+                break;
+            case "Five": 
+                this.num = 5; 
+                break;
+            case "Six": 
+                this.num = 6; 
+                break;
+            case "Seven": 
+                this.num = 7; 
+                break;
+            case "Eight": 
+                this.num = 8; 
+                break;
+            case "Nine": 
+                this.num = 9; 
+                break;
+            case "Ten": 
+                this.num = 10; 
+                break;
+            case "Jack": 
+                this.num = 10; 
+                break;
+            case "Queen": 
+                this.num = 10; 
+                break;
+            case "King": 
+                this.num = 10; 
+                break;
+            case "Ace": 
+                this.num = 11; 
+                break;
     }
     }
     

@@ -5,15 +5,11 @@ package blackjack;
  * @author arshp
  */
 public class Suit1 {
-
-    
-
-    
-    
     private String[] suits = {"Clubs", "Diamonds", "Spades", "Hearts"};
     private String suit;
     private String suitName;
     
+    public Suit1(){}
     
     public String[] getSuits() {
         return suits;
